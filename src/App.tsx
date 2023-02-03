@@ -1,11 +1,13 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
+import { useRoutes } from 'react-router-dom'
+import router from './router'
 
-function App() {
+function App () {
   const [count, setCount] = useState(0)
-
+  const outlet = useRoutes(router)
   return (
     <div className="App">
-      顶级组件
+      {outlet}
     </div>
   )
 }
